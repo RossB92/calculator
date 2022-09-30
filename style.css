@@ -6,6 +6,7 @@ body {
 .calculator {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     background-color: lightgrey;
     border: solid 1px black;
     width: 500px;
@@ -14,4 +15,27 @@ body {
 .operands {
     display: flex;
     justify-content: space-between;
+}
+.numerals {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.row {
+    display: flex;
+}
+.display {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+    border: solid red 1px;
+}
+button {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
 }
