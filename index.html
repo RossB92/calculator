@@ -8,39 +8,55 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Calculator</h1>
+    <section>
+        <div class = 'container'>
+            <div class="display">
+                
+            </div>
+        </div>
+    </section>
+
+
+    <!-- <h1>Calculator</h1>
     <div class = "calculator">
-        <div class="display">
-            <h2>Display</h2>
+        <div class="display-container">
+            <div class="display">
+                <h2 class="display-1">Display</h2>
+                <h2 class="display-2">Display2</h2>
+
+            </div>
         </div>
         <div class = "operands">
-            <button class = 'add'>Add</button>
-            <button class = 'subtract'>Subtract</button>
-            <button class = 'multiply'>Multiply</button>
-            <button class = 'divide'>Divide</button>
+            <button class = 'operand' id = 'add' onclick="add()">+</button>
+            <button class = 'operand' id = 'subtract'>-</button>
+            <button class = 'operand' id = 'multiply'>*</button>
+            <button class = 'operand' id = 'divide'>/</button>
+            <button class = 'operand' id = 'delete'>Delete</button>
         </div>
         <div class = "numerals">
             <div class = "row">
-                <button class = 'one'>1</button>
-                <button class = 'two'>2</button>
-                <button class = 'three'>3</button>
+                <button class = 'num'>1</button>
+                <button class = 'num'>2</button>
+                <button class = 'num'>3</button>
+                <button class = 'num'>4</button>
             </div>
             <div class = "row">
-                <button class = 'four'>4</button>
-                <button class = 'five'>5</button>
-                <button class = 'six'>6</button>
+                <button class = 'num'>5</button>
+                <button class = 'num'>6</button>
+                <button class = 'num'>7</button>
+                <button class = 'num'>8</button>
             </div>
             <div class = "row">
-                <button class = 'seven'>7</button>
-                <button class = 'eight'>8</button>
-                <button class = 'nine'>9</button>
-                <button class = 'zero'>0</button>
+                <button class = 'num'>9</button>
+                <button class = 'num'>0</button>
+                <button data-equals class = 'operand' id='equals'>=</button>
+                <button class = 'all-clear'>AC</button>
             </div>
 
         </div>
 
 
-    </div>
+    </div> -->
 
     <script src = "javascript.js"></script>
 </body>
