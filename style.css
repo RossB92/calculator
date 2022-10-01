@@ -7,7 +7,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: lightgrey;
+    background-color: darkgray;
     border: solid 1px black;
     width: 500px;
     min-height: 75vh;
@@ -26,16 +26,26 @@ body {
 }
 .display {
     display: flex;
+    max-height: 100px;
     flex-grow: 1;
     align-items: center;
     justify-content: center;
-    border: solid red 1px;
+}
+.numerals, .operands, .row {
+    flex-grow: 1;
+}
+.display2{
+    padding-left: 150px;
+    padding-right: 150px;
+    border: 1px solid blue;
+    min-width: 75px;
+    background-color: lightgray;
 }
 button {
     display: flex;
     flex-grow: 1;
     justify-content: center;
     align-items: center;
-    height: 50px;
-    width: 50px;
+    min-height: 50px;
+    min-width: 50px;
 }
