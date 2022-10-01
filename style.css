@@ -25,7 +25,7 @@ body {
 .row {
     display: flex;
 }
-.display {
+.display-container {
     display: flex;
     max-height: 100px;
     flex-grow: 1;
@@ -35,12 +35,16 @@ body {
 .numerals, .operands, .row {
     flex-grow: 1;
 }
-.display2{
+.display{
     padding-left: 150px;
     padding-right: 150px;
     border: 1px solid blue;
     min-width: 75px;
     background-color: lightgray;
+}
+#display-results {
+    display: flex;
+    justify-content: center;
 }
 button {
     display: flex;
