@@ -4,7 +4,7 @@ const tempResultEl = document.querySelector('.temp-result');
 const numbersEl = document.querySelectorAll('.number');
 const operationEl = document.querySelectorAll('.operation');
 const equalEl = document.querySelector('.equal');
-const clearEl = document.querySelector('.all-clear');
+const clearAllEl = document.querySelector('.all-clear');
 const clearLastEl = document.querySelector('.last-entity-clear');
 
 let dis1Num = '';
@@ -67,6 +67,30 @@ function mathOperation() {
     } 
 }
 
+equalEl.addEventListener('click', (e)=> {
+    if(!dis1Num && !dis2Num) return;
+    haveDot = false;
+    mathOperation();
+    clearVar();
+    display2El.innerText = result;
+    tempResultEl.innerText = '';
+    dis2Num = result;
+    dis1Num = '';
+});
+
+clearAllEl.addEventListener('click', (e) =>{
+    display1El.innerText = '0';
+    display2El.innerText = '0';
+    dis1Num = '';
+    dis2Num = '';
+    result = '';
+    tempResultEl.innerText = '0';
+});
+
+clearLastEl.addEventListener('click', (e) => {
+    display2El.innerText = '0';
+    dis2Num = '';
+})
 
 
 // var runner;
