@@ -40,6 +40,7 @@ operationEl.forEach(operation => {
             result = parseFloat(dis2Num);
         }
         clearVar(operationName);
+        lastOperation = operationName;
         console.log(result);
     })
 });
@@ -52,7 +53,19 @@ function clearVar(name = ''){
     tempResultEl.innerText = result;
 }
 
-
+function mathOperation() {
+    if(lastOperation === 'X') {
+        result = parseFloat(result) * parseFloat(dis2Num);
+    } else if (lastOperation === '+') {
+        result = parseFloat(result) + parseFloat(dis2Num);
+    } else if (lastOperation === '÷') {
+        result = parseFloat(result) / parseFloat(dis2Num);
+    } else if (lastOperation === '-') {
+        result = parseFloat(result) - parseFloat(dis2Num);
+    } else if (lastOperation === '%') {
+        result = parseFloat(result) % parseFloat(dis2Num);
+    } 
+}
 
 
 
