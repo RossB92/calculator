@@ -14,16 +14,47 @@ let lastOperation = '';
 let haveDot = false;
 
 numbersEl.forEach(number => {
+    //Create event listner for buttons
     number.addEventListener('click', (e)=> {
+        //If the decimal has been placed, will not place another
         if (e.target.innerText === '.' && !haveDot) {
             haveDot = true;
         } else if (e.target.innerText === '.' && haveDot) {
             return;
         }
+        //Adds the event.target (the button) inner text to variable
         dis2Num += e.target.innerText;
+        //Displays variable in display2El
         display2El.innerHTML = dis2Num;
     })
 })
+
+operationEl.forEach(operation => {
+    operation.addEventListener('click', (e) => {
+        if (!dis2Num) return;
+        haveDot = false;
+        const operationName = e.target.innerText;
+        if(dis1Num && dis2Num && lastOperation) {
+            mathOperation();
+        } else {
+            result = parseFloat(dis2Num);
+        }
+        clearVar(operationName);
+        console.log(result);
+    })
+});
+
+function clearVar(name = ''){
+    dis1Num += dis2Num + ' ' +name + ' ';
+    display1El.innerText = dis1Num;
+    display2El.innerText = '';
+    dis2Num = '';
+    tempResultEl.innerText = result;
+}
+
+
+
+
 
 // var runner;
 // let digit;
