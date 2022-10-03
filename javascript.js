@@ -91,7 +91,48 @@ clearLastEl.addEventListener('click', (e) => {
     display2El.innerText = '0';
     dis2Num = '';
 })
-
+//Keyboard button functionality
+window.addEventListener('keydown', (e) => {
+    if(
+        e.key === '0' ||
+        e.key === '1' ||
+        e.key === '2' ||
+        e.key === '3' ||
+        e.key === '4' ||
+        e.key === '5' ||
+        e.key === '6' ||
+        e.key === '7' ||
+        e.key === '8' ||
+        e.key === '9' ||
+        e.key === '.'
+    ){
+        clickButtonEl(e.key);
+    } else if (
+        e.key === '+' ||
+        e.key === '-' ||
+        e.key === '/' ||
+        e.key === '%'
+    ) {
+        clickOperation(e.key);
+    } else if(e.key === '*') {
+        clickOperation('X');
+    } else if(e.key === '/') {
+        clickOperation('÷');
+});
+function clickButtonEl(key){
+    numbersEl.forEach(button => {
+        if(button.innerText === key) {
+            button.click();
+        }
+    })
+}
+function clickOperation(key) {
+    operationEl.forEach(button => {
+        if(button.innerText === key) {
+            button.click();
+        }
+    })
+}
 
 // var runner;
 // let digit;
