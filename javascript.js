@@ -110,14 +110,16 @@ window.addEventListener('keydown', (e) => {
     } else if (
         e.key === '+' ||
         e.key === '-' ||
-        e.key === '/' ||
         e.key === '%'
     ) {
         clickOperation(e.key);
     } else if(e.key === '*') {
         clickOperation('X');
+    } else if(e.key == 'Enter' || e.key === '=') {
+        clickEqual();
     } else if(e.key === '/') {
         clickOperation('÷');
+    }
 });
 function clickButtonEl(key){
     numbersEl.forEach(button => {
@@ -132,6 +134,9 @@ function clickOperation(key) {
             button.click();
         }
     })
+}
+function clickEqual(){
+    equalEl.click();
 }
 
 // var runner;
